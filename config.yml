@@ -1,0 +1,16 @@
+title: meu_teste
+description: Tentando criar um repositório
+template:
+  repo: meu_teste-template
+  name: meu_teste
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
